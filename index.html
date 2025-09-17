@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Phonetik Datenerhebung</title>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: darkblue; }
+        .word-row { margin: 10px 0; }
+        button:disabled { opacity: 0.5; }
+        .status { margin-left: 10px; color: green; }
+        .timer { margin-left: 10px; color: red; }
+    </style>
+</head>
+<body>
+    <h1>Phonetik Datenerhebung</h1>
+    <p>Bitte geben Sie Ihren Namen ein und sprechen Sie jedes Wort für 3 Sekunden ein.</p>
+
+    <label for="username">Name: </label>
+    <input type="text" id="username" placeholder="Ihr Name">
+
+    <div id="word-list">
+        <div class="word-row">
+            <span>Haus</span>
+            <button onclick="startRecording('Haus')" disabled>Aufnehmen</button>
+            <span class="timer"></span>
+            <span class="status"></span>
+        </div>
+
+        <div class="word-row">
+            <span>Baum</span>
+            <button onclick="startRecording('Baum')" disabled>Aufnehmen</button>
+            <span class="timer"></span>
+            <span class="status"></span>
+        </div>
+
+        <div class="word-row">
+            <span>Dreck</span>
+            <button onclick="startRecording('Dreck')" disabled>Aufnehmen</button>
+            <span class="timer"></span>
+            <span class="status"></span>
+        </div>
+    </div>
+</body>
+</html>
